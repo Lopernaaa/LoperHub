@@ -113,12 +113,16 @@ bnds:Bind(
     end
 )
 
-serv:Channel("by dawid#7205")
+serv:Channel("by lopereiei")
 
 win:Server("Main", "")
+
+local tgls = serv:Channel("Farm")
+
+tgls:Toggle(
     "Auto-Farm",
     false,
-    function()
+    function(bool)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/AutoFarm"))()
     end
 )
