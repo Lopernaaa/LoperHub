@@ -1,7 +1,7 @@
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("discord library")
+local win = DiscordLib:Window("Loper X Hub")
 
 local serv = win:Server("Preview", "")
 
@@ -115,4 +115,10 @@ bnds:Bind(
 
 serv:Channel("by dawid#7205")
 
-win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+win:Server("Main", "")
+    "Auto-Farm",
+    true,
+    function(bool)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/AutoFarm"))()
+    end
+)
