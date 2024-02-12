@@ -5,7 +5,7 @@ local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Farm")
 Section:NewToggle("Farm Level", "ToggleInfo", function(state)
     if state then
-        loadstring(Game:HttpGet("")
+        loadstring(Game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/Autofarm")
     else
         print("off autofarm")
     end
