@@ -5,8 +5,8 @@ local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Farm")
 Section:NewToggle("Farm Level", "ToggleInfo", function(state)
     if state then
-        loadstring(Game:HttpGet
+        loadstring(Game:HttpGet("")
     else
-        print("Toggle Off")
+        print("off autofarm")
     end
 end)
