@@ -1,30 +1,3 @@
--- สร้าง ImageButton
-local myButton = Instance.new("ImageButton")
-myButton.Parent = game.Players.LocalPlayer.PlayerGui -- นำไปใส่ใน PlayerGui หรือเลือก Parent ที่เหมาะสม
-
--- กำหนดรูปภาพ
-myButton.Image = "rbxassetid://123456789" -- เปลี่ยนเลข ID เป็น ID ของรูปภาพที่คุณต้องการใช้
-
--- กำหนดขนาด
-myButton.Size = UDim2.new(0, 100, 0, 50) -- ขนาดความกว้างและความสูง
-
--- สร้างตัวแปรสถานะสำหรับเก็บว่า UI ในสถานะใด
-local isUIVisible = false
-
--- สร้างฟังก์ชั่นที่จะทำงานเมื่อปุ่มถูกคลิก
-myButton.MouseButton1Click:Connect(function()
-    -- สลับสถานะ UI
-    isUIVisible = not isUIVisible
-    
-    -- ตรวจสอบสถานะและแสดงหรือซ่อน UI ตามนั้น
-    if isUIVisible then
-        -- ทำสิ่งที่คุณต้องการทำเมื่อ UI เปิด
-        print("UI opened!")
-    else
-        -- ทำสิ่งที่คุณต้องการทำเมื่อ UI ปิด
-        print("UI closed!")
-    end
-end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
