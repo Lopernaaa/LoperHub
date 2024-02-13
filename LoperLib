@@ -5,6 +5,6 @@ local Win = library:Evil("Loper","Hub",_G.Logo )
 
 local Tab = Win:CraftTab('Main') -- Name
 local Page = Tab:CraftPage('Main',1) -- Name,1 or 2
-Page:Toggle('Farm Level',nil,function() -- Toggle,Def,callback
+Page:Toggle('Farm Level',nil,function(a) -- Toggle,Def,callback
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/Autofarm"))()
 end)
