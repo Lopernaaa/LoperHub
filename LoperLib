@@ -1,10 +1,7 @@
-local normal = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Lucifer4381/ui-normal-hub/main/scr')))()
-_G.Color = Color3.fromRGB(0, 0, 255) -- Color UI
-_G.Logo = 13990972098 -- ID Logo Your Hub
-local Win = library:Evil("Loper","Hub",_G.Logo )
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+local win = lib:Window("Loper x Hub",Color3.fromRGB(0, 0, 225), Enum.KeyCode.RightControl)
 
-local Tab = Win:CraftTab('Main') -- Name
-local Page = Tab:CraftPage('Main',1) -- Name,1 or 2
-Page:Toggle('Farm Level',Eiei,function(a) -- Toggle,Def,callback
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/Autofarm"))()
+local tab = win:Tab("Main")
+tab:Toggle("Farm Level",false, function(t)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/Autofarm"))()
 end)
