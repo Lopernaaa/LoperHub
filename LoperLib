@@ -4,4 +4,6 @@ local win = lib:Window("Loper x Hub",Color3.fromRGB(0, 0, 225), Enum.KeyCode.Rig
 local tab = win:Tab("Main")
 tab:Toggle("Farm Level",false, function(t)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lopernaaa/LoperHub/main/Autofarm"))()
+else
+_G.Auto_Farm = false
 end)
