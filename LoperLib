@@ -1,28 +1,184 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Loper X Hub", "DarkTheme")
-local Tab = Window:NewTab("Main")
-local Section = Tab:NewSection("Farm")
+_G.Color = Color3.fromRGB(255, 0, 0)
+_G.Logo = 16357015142
 
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ScreenGui"
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
 
-local Toggle = Instance.new("TextButton")
-Toggle.Name = "Toggle"
-Toggle.Parent = ScreenGui
-Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 35, 0, 35)
-Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "LH"
-Toggle.TextColor3 = Color3.fromRGB(0, 0, 255)
-Toggle.TextSize = 28.000
-Toggle.Draggable = true
-Toggle.MouseButton1Click:connect(function()
-    Library:ToggleUI()
+local Evil = loadstring(game:HttpGet("https://raw.githubusercontent.com/lntanon55/Golf-HUB/main/Protected_9405524596134885.lua.txt"))()
+local Win = library:Evil("Name Hub","",_G.Logo )
+
+local tab1 = Win:CraftTab('Main')
+local page1 = tab1:CraftPage('Main',1)
+
+local player = page1:Label('Label')
+
+page1:Button('Button',function()
+    print("t")
 end)
 
-local Corner = Instance.new("UICorner")
-Corner.Name = "Corner"
-Corner.Parent = Toggle
+page1:Dropdown("Dropdown",{"1","2"},{""},function(v)
+    print(v)
+end)
+
+page1:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+page1:Label('Label')
+
+page1:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page1:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page1:Button('Button',function()
+    print("t")
+end)
+
+page1:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page1:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+local page2 = tab1:CraftPage('Main',2)
+
+page2:Label('Label')
+
+page2:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page2:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page2:Button('Button',function()
+    print("t")
+end)
+
+page2:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page2:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+page2:Label('Label \n Omg')
+
+page2:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page2:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page2:Button('Button',function()
+    print("t")
+end)
+
+page2:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page2:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+local tab2 = Win:CraftTab('Main2')
+local page3 = tab2:CraftPage('Main',1)
+
+page3:Label('Label')
+
+page3:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page3:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page3:Button('Button',function()
+    print("t")
+end)
+
+page3:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page3:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+page3:Label('Label')
+
+page3:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page3:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page3:Button('Button',function()
+    print("t")
+end)
+
+page3:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page3:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+local page4 = tab2:CraftPage('Main',2)
+
+page4:Label('Label')
+
+page4:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page4:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page4:Button('Button',function()
+    print("t")
+end)
+
+page4:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page4:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
+
+page4:Label('Label')
+
+page4:Dropdown("Test",{"Melee","Sword","Gun","Fruit"},"Melee",function(a)
+    print(a)
+end)
+
+page4:Toggle('Test',nil,function(a)
+    print(a)
+end)
+
+page4:Button('Button',function()
+    print("t")
+end)
+
+page4:MultiDropdown("MultiDropdown",{"MultiDropdown","MultiDropdown2"},{""},function(v)
+    print(v)
+end)
+
+page4:Slider("Slider",true,0,100,1,function(value)
+    print(value)
+end)
