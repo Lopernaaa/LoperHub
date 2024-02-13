@@ -14,7 +14,7 @@ end
 function checklevel()
     local lv = game:GetService("Players").LocalPlayer.Data.Level.Value
     if lv == 1 or lv <= 9 then
-        Mon = "Bandit [Lv. 5]"
+        Mon = "Bandit"
         Title = "Bandit"
         QuestName = "BanditQuest1"
         QuestNumber = 1
@@ -22,7 +22,7 @@ function checklevel()
         CFrameMon = CFrame.new(1151.11829, 16.7761021, 1599.73499, -0.999999762, 0, -0.000701809535, 0, 1, 0, 0.000701809535, 0, -0.999999762)
         CFramePuk = CFrame.new(1101.75903, 67.6758957, 1617.50391, -0.399259984, -5.24373327e-08, -0.916837752, -1.74068084e-08, 1, -4.96134582e-08, 0.916837752, -3.84945009e-09, -0.399259984)
     elseif lv == 10 or lv <= 14 then
-        Mon = "Monkey [Lv. 14]"
+        Mon = "Monkey"
         Title = "Monkey"
         QuestName = "JungleQuest"
         QuestNumber = 1
@@ -30,7 +30,7 @@ function checklevel()
         CFrameMon = CFrame.new(-1479.76099, 23.195364, 106.327942, 0.96289885, 5.22265786e-10, -0.269862473, 6.59528099e-10, 1, 4.28857172e-09, 0.269862473, -4.30744285e-09, 0.96289885)
         CFramePuk = CFrame.new(-1776.32959, 61.1782455, 66.8902054, -0.912609756, -2.38546143e-08, 0.408831745, -2.14773621e-08, 1, 1.04056577e-08, -0.408831745, 7.15677129e-10, -0.912609756)
         elseif lv == 15 or lv <= 29 then
-        Mon = "Gorilla [Lv. 20]"
+        Mon = "Gorilla"
         Title = "Gorilla"
         QuestName = "JungleQuest"
         QuestNumber = 2
