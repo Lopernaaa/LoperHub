@@ -1,8 +1,10 @@
-local SolarisLib = loadstring(game:HttpGet("https://solarishub.dev/SolarisLib.lua"))()
-local win = SolarisLib:New({
-   Name = "Loper X Hub",
-   FolderToSave = "SolarisLibStuff"
-})
+local normal = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Lucifer4381/ui-normal-hub/main/scr')))()
+_G.Color = Color3.fromRGB(0, 0, 255) -- Color UI
+_G.Logo = 13990972098 -- ID Logo Your Hub
+local Win = library:Evil("Loper","Hub",_G.Logo )
 
-local tab = win:Tab("Main")
-local sec = tab:Section("Farm")
+local Tab = Win:CraftTab('Main') -- Name
+local Page = Tab:CraftPage('Main',1) -- Name,1 or 2
+Page:Toggle('Farm Level',nil,function(a) -- Toggle,Def,callback
+    print(a)
+end)
