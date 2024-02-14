@@ -11,7 +11,7 @@ local page1 = tab1:CraftPage('Main',1)
 local player = page1:Label('Label')
 
 page1:Toggle('Farm Level',nil,function(a)
-    _G.Auto_Farm = true -- true / false
+    _G.Auto_Farm = a -- true / false
 
 function totarget(p)
     local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -134,30 +134,3 @@ spawn(function()
         end)
     end
 end)
-
-local page2 = tab1:CraftPage('Main',2)
-
-page2:Label('Label')
-
-page2:Toggle('FastAttack',nil,function(b)
-    _G.FastAttack = b
-
-    spawn(function()
-    while task.wait(.1) do
-        pcall(function()
-            if _G.FastAttack then
-            local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
-Camera:Stop()
-coroutine.wrap(function()
-    game:GetService("RunService").Stepped:Connect(function()
-        if getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
-            getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
-            getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 25
-            getupvalues(CombatFramework)[2]['activeController']:attack()
-        end
-    end)
-end)()
-end
-
-end
