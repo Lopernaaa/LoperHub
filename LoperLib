@@ -1,4 +1,17 @@
-_G.Auto_Farm = true -- true / false
+_G.Color = Color3.fromRGB(0, 0, 255)
+_G.Logo = 16357015121
+
+
+local Evil = loadstring(game:HttpGet("https://raw.githubusercontent.com/lntanon55/Golf-HUB/main/Protected_9405524596134885.lua.txt"))()
+local Win = library:Evil("Loper Hub","",_G.Logo )
+
+local tab1 = Win:CraftTab('Main')
+local page1 = tab1:CraftPage('Main',1)
+
+local player = page1:Label('Label')
+
+page1:Toggle('Farm Level',nil,function(a)
+    _G.Auto_Farm = true -- true / false
 
 function totarget(p)
     local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -122,7 +135,11 @@ spawn(function()
     end
 end)
 
-page1:Toggle('FastAttack',nil,function(b)
+local page2 = tab1:CraftPage('Main',2)
+
+page2:Label('Label')
+
+page2:Toggle('FastAttack',nil,function(b)
     _G.FastAttack = b
 
     spawn(function()
@@ -141,4 +158,6 @@ coroutine.wrap(function()
         end
     end)
 end)()
+end
+
 end
