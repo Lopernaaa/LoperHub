@@ -30,6 +30,7 @@ local function autoFarm(p)
 end
 
 -- ออโต้ฟาร์ม
+_G.Auto_Farm =
 function CheckLevel(p)
 local Lv = game:GetService("Players").LocalPlayer.Data.Level.Value
 if First_Sea then
