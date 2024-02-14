@@ -152,7 +152,7 @@ page2:Toggle('FastAttack',nil,function(fast)
             local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
             Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
             Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 150
+            Combat.activeController.hitboxMagnitude = 120
             Combat.activeController.increment = 3
         end
     end)
@@ -172,24 +172,3 @@ end)
 end)
 
 end
-
-local Weaponlist = {}
-local Weapon = nil
-
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    table.insert(Weaponlist,v.Name)
-end
-
-page2:Dropdown("Select Weapon",Weaponlist, function(currentOption)
-    Weapon = currentOption
-end)
-
-spawn(function()
-while wait() do
-if AutoEquiped then
-pcall(function()
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
-end)
-end
-end
-end)
