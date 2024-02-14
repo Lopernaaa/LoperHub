@@ -1,16 +1,4 @@
-_G.Color = Color3.fromRGB(0, 0, 255)
-_G.Logo = 16357015121
-
-local Evil = loadstring(game:HttpGet("https://raw.githubusercontent.com/lntanon55/Golf-HUB/main/Protected_9405524596134885.lua.txt"))()
-local Win = library:Evil("Loper Hub","",_G.Logo )
-
-local tab1 = Win:CraftTab('Main')
-local page1 = tab1:CraftPage('Main',1)
-
-local player = page1:Label('Auto Farm')
-
-page1:Toggle('Farm Level',nil,function(a)
-    _G.Auto_Farm = a
+_G.Auto_Farm = true -- true / false
 
 function totarget(p)
     local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -133,4 +121,24 @@ spawn(function()
         end)
     end
 end)
-end)
+
+page1:Toggle('FastAttack',nil,function(b)
+    _G.FastAttack = b
+
+    spawn(function()
+    while task.wait(.1) do
+        pcall(function()
+            if _G.FastAttack then
+            local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+Camera:Stop()
+coroutine.wrap(function()
+    game:GetService("RunService").Stepped:Connect(function()
+        if getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
+            getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
+            getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 25
+            getupvalues(CombatFramework)[2]['activeController']:attack()
+        end
+    end)
+end)()
+end
