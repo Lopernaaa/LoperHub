@@ -8,7 +8,7 @@ local Win = library:Evil("Loper Hub","",_G.Logo )
 local tab1 = Win:CraftTab('Main')
 local page1 = tab1:CraftPage('Main',1)
 
-local player = page1:Label('Label')
+local player = page1:Label('ฟาร์ม')
 
 page1:Toggle('Farm Level',nil,function(a)
 _G.Auto_Farm = a -- true / false
@@ -134,4 +134,40 @@ spawn(function()
         end)
     end
 end)
+end)
+
+local page2 = tab1:CraftPage('Main',2)
+
+page2:Label('ตั้งค่า')
+
+page2:Toggle('FastAttack',nil,function(fast)
+    _G.FastAttack = fast
+
+    spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FastAttack then
+            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
+            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
+            Combat.activeController.timeToNextAttack = 0
+            Combat.activeController.hitboxMagnitude = 150
+            Combat.activeController.increment = 3
+        end
+    end)
+end) 
+end)
+ 
+ 
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FastAttack then
+            game:GetService'VirtualUser':CaptureController()
+            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+        end
+    end)
+end) 
+end)
+
 end)
