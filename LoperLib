@@ -9,8 +9,8 @@ local page1 = tab1:CraftPage('Main',1)
 
 local player = page1:Label('Auto Farm')
 
-page1:Toggle('Farm Level',nil,function(a)
-local function toggleFunction(a)
+page1:Toggle('Farm Level',nil,function(p)
+local function toggleFunction(p)
     isToggleOn = not isToggleOn
     if isToggleOn then
         _G.Auto_Farm = true
