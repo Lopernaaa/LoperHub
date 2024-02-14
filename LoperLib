@@ -1,5 +1,5 @@
 _G.Color = Color3.fromRGB(0, 0, 255)
-_G.Logo = 16357015142
+_G.Logo = 16357015121
 
 local Evil = loadstring(game:HttpGet("https://raw.githubusercontent.com/lntanon55/Golf-HUB/main/Protected_9405524596134885.lua.txt"))()
 local Win = library:Evil("Loper Hub","",_G.Logo )
@@ -10,8 +10,27 @@ local page1 = tab1:CraftPage('Main',1)
 local player = page1:Label('Auto Farm')
 
 page1:Toggle('Farm Level',nil,function(a)
+local function toggleFunction(a)
+    isToggleOn = not isToggleOn
+    if isToggleOn then
+        _G.Auto_Farm = true
+        -- ทำอะไรก็ตามเมื่อ toggle เปิด
+    else
+        _G.Auto_Farm = false
+        -- ทำอะไรก็ตามเมื่อ toggle ปิด
+    end
+end
+-- ฟังก์ชันทำงานของออโต้ฟาร์ม
+local function autoFarm(p)
+    while _G.Auto_Farm do
+        -- กระทำทำงานของออโต้ฟาร์มที่นี่
+        print("ออโต้ฟาร์มกำลังทำงาน...")
+        wait(1) -- รอ 1 วินาที
+    end
+end
 
-function CheckLevel()
+-- ออโต้ฟาร์ม
+function CheckLevel(p)
 local Lv = game:GetService("Players").LocalPlayer.Data.Level.Value
 if First_Sea then
 if Lv == 1 or Lv <= 9 or SelectMonster == "Bandit" or SelectArea == 'Jungle' then -- Bandit
