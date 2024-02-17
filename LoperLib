@@ -1970,11 +1970,11 @@ function UpdateFlowerChams()
 						name.TextStrokeTransparency = 0.5
 						name.TextColor3 = Color3.fromRGB(255, 0, 0)
 						if v.Name == "Flower1" then 
-							name.Text = ("Blue Flower" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
+							name.Text = ("ดอกสี น้ำเงิน" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
 							name.TextColor3 = Color3.fromRGB(0, 0, 255)
 						end
 						if v.Name == "Flower2" then
-							name.Text = ("Red Flower" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
+							name.Text = ("ดอกสี แดง" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
 							name.TextColor3 = Color3.fromRGB(255, 0, 0)
 						end
 					else
@@ -2263,11 +2263,11 @@ function UpdateFlowerChams()
 						name.TextStrokeTransparency = 0.5
 						name.TextColor3 = Color3.fromRGB(255, 0, 0)
 						if v.Name == "Flower1" then 
-							name.Text = ("Blue Flower" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
+							name.Text = ("ดอกสี น้ำเงิน" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
 							name.TextColor3 = Color3.fromRGB(0, 0, 255)
 						end
 						if v.Name == "Flower2" then
-							name.Text = ("Red Flower" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
+							name.Text = ("ดอกสี แดง" ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Position).Magnitude/3) ..' Distance')
 							name.TextColor3 = Color3.fromRGB(255, 0, 0)
 						end
 					else
@@ -3265,25 +3265,25 @@ print("Load Script")
 
 local Library = Update:Window("           Loper","16387180116",Enum.KeyCode.RightControl);
 
-local H = Library:AddTab("Home","6026568198")
-local Main = Library:AddTab("Level Farm","13075651575")
-local M = Library:AddTab("Auto Item","13075622619")
-local Ss = Library:AddTab("Stats","7040410130")
-local RaceV4 = Library:AddTab("RaceV4","11162889532")
-local P = Library:AddTab("Player","7251993295")
-local R = Library:AddTab("Raid","11155986081")
-local T = Library:AddTab("Teleport","11155851001")
-local S = Library:AddTab("Shop","6031265976")
-local D = Library:AddTab("Devil Fruit","7044233235")
-local Misc = Library:AddTab("Misc","11156061121")
+local H = Library:AddTab("หน้าหลัก","6026568198")
+local Main = Library:AddTab("ฟาร์ม เลเวล","13075651575")
+local M = Library:AddTab("หาของ","13075622619")
+local Ss = Library:AddTab("ค่าพลัง","7040410130")
+local RaceV4 = Library:AddTab("เผ่า v4","11162889532")
+local P = Library:AddTab("ผู้เล่น","7251993295")
+local R = Library:AddTab("ลงดัน","11155986081")
+local T = Library:AddTab("เทเลพอร์ต","11155851001")
+local S = Library:AddTab("ร้านค้า","6031265976")
+local D = Library:AddTab("ผลไม้ปีศาจ","7044233235")
+local Misc = Library:AddTab("อื่นๆ","11156061121")
 local G = Library:AddTab("","")
 
-local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+local Time = H:AddLabel("วันที่");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 H:AddLabel("Script PC/Mobile")
-H:AddLabel("Wellcone To Script Loper Hub")
+H:AddLabel("Welcome To Script Loper Hub")
 
-H:AddSeperator("Credit")
+H:AddSeperator("เครดิต")
 
 
 
@@ -3291,9 +3291,9 @@ H:AddButton("Copy Discord Loper Hub",function()
 setclipboard("https://discord.com/invite/V8FYuhekBS")
 end)
 
-H:AddSeperator("Status")
+H:AddSeperator("สถานะ")
     
-    local locallv = H:AddLabel("Level")
+    local locallv = H:AddLabel("เลเวลl")
     
     spawn(function()
         while wait() do
@@ -3303,7 +3303,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localrace = H:AddLabel("Race")
+    local localrace = H:AddLabel("เผ่า")
     
     spawn(function()
         while wait() do
@@ -3313,7 +3313,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localbeli = H:AddLabel("Beli")
+    local localbeli = H:AddLabel("เงินเขียว")
     
     spawn(function()
         while wait() do
@@ -3323,7 +3323,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localfrag = H:AddLabel("Fragment")
+    local localfrag = H:AddLabel("เงินม่วง")
     
     spawn(function()
         while wait() do
@@ -3334,7 +3334,7 @@ H:AddSeperator("Status")
     end)
     
     
-    local localexp = H:AddLabel("ExP")
+    local localexp = H:AddLabel("แต้ม ExP")
     
     spawn(function()
         while wait() do
@@ -3344,7 +3344,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localstat = H:AddLabel("Stats Points")
+    local localstat = H:AddLabel("ค่าพลัง")
     
     spawn(function()
         while wait() do
@@ -3354,7 +3354,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localbountyhornor = H:AddLabel("Bounty")
+    local localbountyhornor = H:AddLabel("ค่าหัว")
     
     spawn(function()
         while wait() do
@@ -3364,7 +3364,7 @@ H:AddSeperator("Status")
         end
     end)
     
-    local localDevil = H:AddLabel("Devil Fruit")
+    local localDevil = H:AddLabel("ผลไม้ปีศาจ")
     
     spawn(function()
         while wait() do
@@ -3578,10 +3578,10 @@ spawn(function()
     end
 end)
 
-Main:AddSeperator("Farm")
+Main:AddSeperator("ฟาร์ม")
 
 
-Main:AddToggle("Auto SetSpawn Point [open it If you use Bypass Tp]",true,function(value)
+Main:AddToggle("ออโต้ ตั้งจุดเกิด [เปิดเมื่อใช้บายพาสวาป]",true,function(value)
     _G.Set = value
 end)
 
@@ -3644,8 +3644,8 @@ task.spawn(function()
 	end
     end)
     
-local ListF = {"Normal", "Not Tween To Npc Quest", "No Quest"}
-FarmMode = "Normal"
+local ListF = {"ปกติ", "ไม่บินไปรับเควส", "ไม่รับเควส"}
+FarmMode = "ปกติ"
 Main:AddDropdown("Farm Mode", ListF,function(value)
     FarmMode = value
 end)
@@ -3671,14 +3671,14 @@ spawn(function()
   end)
   
 
-    Main:AddToggle("Auto Farm Level",_G.AutoFarm,function(value)
+    Main:AddToggle("ฟาร์มเลเวล",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
     end)
     
     spawn(function()
         while wait() do
-            if FarmMode == "Normal" and _G.AutoFarm then
+            if FarmMode == "ปกติ" and _G.AutoFarm then
                 pcall(function()
                     local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                     if not string.find(QuestTitle, NameMon) then
@@ -3751,7 +3751,7 @@ spawn(function()
     
     spawn(function()
         while wait() do
-            if FarmMode == "Not Tween To Npc Quest" and _G.AutoFarm then
+            if FarmMode == "ไม่บินไปรับเควส" and _G.AutoFarm then
                 pcall(function()
                     local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                     if not string.find(QuestTitle, NameMon) then
@@ -3815,7 +3815,7 @@ spawn(function()
     
     spawn(function()
         while wait() do
-            if FarmMode == "No Quest" and _G.AutoFarm then
+            if FarmMode == "ไม่รับเควส" and _G.AutoFarm then
                 pcall(function()
                 CheckQuest()
                     if game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
@@ -3856,7 +3856,7 @@ spawn(function()
     end)
 
 if World1 then
-    Main:AddToggle("Auto Farm Fast (Farm Lv.1-300)",_G.AutoFarmFast,function(value)
+    Main:AddToggle("ฟาร์มด่วน (ฟาร์ม Lv.1-300)",_G.AutoFarmFast,function(value)
         _G.Farmfast = value
         StopTween(_G.Farmfast)
     end)
@@ -3941,7 +3941,7 @@ end
 
 
     
-Main:AddToggle("Auto Kaitan",false,function(value)
+Main:AddToggle("ออโต้ ไก่ตัน",false,function(value)
        _G.AutoFarm = value
        _G.SelectWeapon = "Combat"
        _G.Auto_Stats_Kaitun = value
@@ -4006,11 +4006,11 @@ end
 
 
 
-Main:AddDropdown("Select Mob",tableMon,function(vu)
+Main:AddDropdown("เลือก มอน",tableMon,function(vu)
     _G.SelectMob = vu
 end)
     
-    Main:AddToggle("Auto Farm Mob",_G.AutoFarmMob,function(value)
+    Main:AddToggle("ฟาร์ม มอน",_G.AutoFarmMob,function(value)
         _G.AutoFarmMob = value
         StopTween(_G.AutoFarmMob)
     end)
@@ -4049,7 +4049,7 @@ end)
         end
     end)
     
-   Main:AddToggle("Auto Farm Nearest ",_G.AutoFarmNearest,function(value)
+   Main:AddToggle("ฟาร์ม มอนรอบๆ",_G.AutoFarmNearest,function(value)
    _G.AutoFarmNearest = value
    StopTween(_G.AutoFarmNearest)
  end)
@@ -4088,9 +4088,9 @@ spawn(function()
     
 
     
-    Main:AddLabel("Chest Farm")
+    Main:AddLabel("ฟาร์มกล่อง")
     
-Main:AddToggle("Auto Farm Chest",false,function(value)
+Main:AddToggle("ออโต้ เก็บกล่อง",false,function(value)
  AutoFarmChest = value
  StopTween(AutoFarmChest)
  end)
@@ -4119,7 +4119,7 @@ spawn(function()
 	end
 end)
 
-Main:AddToggle("Auto Farm Chest Mirage island",false,function(value)
+Main:AddToggle("ออโต้ ฟาร์มกล่อง เกาะลับ",false,function(value)
  _G.AutoChestMirage = value
  StopTween(_G.AutoChestMirage)
  end)
@@ -4149,7 +4149,7 @@ spawn(function()
 	end
 end)
 
-Main:AddToggle("Auto Chest Bypass",false,function(vu)
+Main:AddToggle("วาร์ปเก็บกล่อง (เสี่ยง)",false,function(vu)
 	_G.ChestBypass = vu
 end)
 
@@ -4732,20 +4732,20 @@ function Chest_17500()
 	end
 end
 
-Main:AddToggle("Auto Farm Chest Hop",_G.AutoFarmChest_Hop,function(value)
+Main:AddToggle("ออโต้ย้ายเซิฟ เก็บกล่อง",_G.AutoFarmChest_Hop,function(value)
     _G.AutoFarmChest_Hop = value
     end)
 
 
-    Main:AddSeperator("Dought Boss")
+    Main:AddSeperator("คาตากุริ")
     
-local ListC = {"NoQuest", "AcceptQuest", "MasteryFruit"}
-CakeFMode = "Accept Quest"
-Main:AddDropdown("Select Cake Farm Mode", ListC,function(value)
+local ListC = {"ไม่รับเควส", "รับเควส", "มาสผลปีศาจ"}
+CakeFMode = "รับเควส"
+Main:AddDropdown("โหมดฟาร์ม คาตากุริ", ListC,function(value)
     CakeFMode = value
 end)
 
-        local MobKilled = Main:AddLabel("Killed")
+        local MobKilled = Main:AddLabel("ฆ่า")
     
     spawn(function()
         while wait() do
@@ -4757,13 +4757,13 @@ end)
                 elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
                     MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
                 else
-                    MobKilled:Set("Boss Is Spawning")
+                    MobKilled:Set("บอสเกิดอยู่")
                 end
             end)
         end
     end)
     
-    Main:AddToggle("Auto Farm Cake Prince",_G.AutoDoughtBoss,function(value)
+    Main:AddToggle("ออโต้ฟาร์ม มอนเกาะเค้ก",_G.AutoDoughtBoss,function(value)
         _G.AutoDoughtBoss = value
         StopTween(_G.AutoDoughtBoss)
     end)
@@ -4785,7 +4785,7 @@ end)
     local CakePos = CFrame.new(-2091.911865234375, 70.00884246826172, -12142.8359375)
     spawn(function()
         while wait() do
-            if CakeFMode == "NoQuest" and _G.AutoDoughtBoss then
+            if CakeFMode == "ไม่รับเควส" and _G.AutoDoughtBoss then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -4881,7 +4881,7 @@ end)
       
 spawn(function()
         while wait() do
-            if CakeFMode == "AcceptQuest" and _G.AutoDoughtBoss and World3  then
+            if CakeFMode == "รับเควส" and _G.AutoDoughtBoss and World3  then
                 pcall(function()
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") or game:GetService("Workspace").Enemies:FindFirstChild("Dough King") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
@@ -4913,7 +4913,7 @@ spawn(function()
     
     spawn(function()
         while wait() do
-            if CakeFMode == "AcceptQuest" and _G.AutoDoughtBoss and World3 and not game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince")  then
+            if CakeFMode == "รับเควส" and _G.AutoDoughtBoss and World3 and not game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince")  then
                 pcall(function()
                     local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                     if not string.find(QuestTitle, "Cookie Crafter") then
@@ -4977,7 +4977,7 @@ spawn(function()
     
     spawn(function()
         while wait() do
-            if CakeFMode == "MasteryFruit" and _G.AutoDoughtBoss and World3 and not game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince")  then
+            if CakeFMode == "มาสผลปีศาจ" and _G.AutoDoughtBoss and World3 and not game:GetService("ReplicatedStorage"):FindFirstChild("Cake Prince")  then
                 pcall(function()
                     local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                     if not string.find(QuestTitle, "Cookie Crafter") then
@@ -5062,16 +5062,16 @@ spawn(function()
         end
     end)
     
-    Main:AddToggle("Auto Spawn Cake Prince",true,function(value)
+    Main:AddToggle("ออโต้ เสกคาตากุริ",true,function(value)
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",value)
     end)
     
-    Main:AddToggle("Auto Dough Boss v2", _G.Autodoughking,function(value)
+    Main:AddToggle("ออโต้ เสกคาตากุริ วี2", _G.Autodoughking,function(value)
          _G.Autodoughking = value
         StopTween( _G.Autodoughking)
     end)
     
-    Main:AddToggle("Auto Dough Boss v2 Hop", _G.AutodoughkingHop,function(value)
+    Main:AddToggle("ย้ายเซิฟ ตีคาตากุริ วี2", _G.AutodoughkingHop,function(value)
          _G.AutodoughkingHop = value
     end)
     
@@ -5114,7 +5114,7 @@ spawn(function()
     end)
    
     
-    Main:AddSeperator("Boss")
+    Main:AddSeperator("บอส")
     
     local Boss = {}
 
@@ -5144,11 +5144,11 @@ for _, name in pairs(Boss) do
 end
 
 
-local BossName = Main:AddDropdown("Select Boss", bossCheck, function(value)
+local BossName = Main:AddDropdown("เลือก บอส", bossCheck, function(value)
     _G.SelectBoss = value
 end)
 
-Main:AddButton("Refresh Boss", function()
+Main:AddButton("รีเฟรช บอส", function()
 BossName:Clear()
 wait(0.1)
 for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
@@ -5160,7 +5160,7 @@ for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
     end
 end
 end)
-    Main:AddToggle("Auto Farm Boss",_G.AutoFarmBoss,function(value)
+    Main:AddToggle("ออโต้ฟาร์ม บอส",_G.AutoFarmBoss,function(value)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
         _G.AutoFarmBoss = value
         StopTween(_G.AutoFarmBoss)
@@ -5232,12 +5232,12 @@ end)
         end
     end)
     
-    Main:AddToggle("Auto Farm All Boss",_G.AutoAllBoss,function(value)
+    Main:AddToggle("ออโต้ฟาร์ม บอส ทุกตัว",_G.AutoAllBoss,function(value)
         _G.AutoAllBoss = value
         StopTween(_G.AutoAllBoss)
     end)
     
-    Main:AddToggle("Auto Farm All Boss Hop",_G.AutoAllBossHop,function(value)
+    Main:AddToggle("ย้ายเซิฟตีบอสทุกตัว",_G.AutoAllBossHop,function(value)
         _G.AutoAllBossHop = value
     end)
     
@@ -5272,15 +5272,15 @@ end)
         end
     end)
     
-    Main:AddSeperator("Setting")
+    Main:AddSeperator("ตั้งค่า")
     
     
-Main:AddToggle("By Pass Tp",BypassTP,function(Fast)
+Main:AddToggle("Bypass Tp",BypassTP,function(Fast)
 BypassTP = Fast
 end)
 
     
-Main:AddToggle("Bring Mob",true,function(Mag)
+Main:AddToggle("รวมมอน",true,function(Mag)
     _G.BringMonster = Mag
     end)
     spawn(function()
@@ -5316,9 +5316,9 @@ Main:AddToggle("Bring Mob",true,function(Mag)
         end
     end)
     
-local Bring = {"Low", "Normal", "Super Bring"}
-_G.BringMode = "Normal"
-Main:AddDropdown("Bring Mob Mode", Bring,function(value)
+local Bring = {"ใกล้", "ปกติ", "โคตรไกล"}
+_G.BringMode = "ปกติ"
+Main:AddDropdown("โหมด รวมมอน", Bring,function(value)
     _G.BringMode = value
 end)
 spawn(function()
@@ -5337,7 +5337,7 @@ spawn(function()
     end
 end)
     
-Main:AddToggle("Auto Haki",true,function(value)
+Main:AddToggle("ออโต้ ฮาคิ",true,function(value)
 _G.AUTOHAKI = value
 end)
 spawn(function()
@@ -5354,11 +5354,11 @@ spawn(function()
 end)
 
   
-    Main:AddToggle("Fast Attack",true,function(value)
+    Main:AddToggle("ตีเร็ว",true,function(value)
         _G.FastAttack = value
     end)      
     
-    Main:AddToggle("Fast Attack Super Fast [Trun on Fast Attack to use!!] ",_G.NotDeley,function(value)
+    Main:AddToggle("ตีเร็วโคตรพ่อโคตรแม่ [เปิดตีเร็วเพื่อใช้] ",_G.NotDeley,function(value)
         _G.NotDeley = value
     end)      
     
@@ -5425,7 +5425,7 @@ end)
 
 local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
 _G.FastAttackDelay = "0.175"
-Main:AddDropdown("Fast Attack Delay", AttackList,function(MakoGay)
+Main:AddDropdown("ความเร็วการตี", AttackList,function(MakoGay)
     _G.FastAttackDelay = MakoGay
 end)
 spawn(function()
@@ -5524,11 +5524,11 @@ spawn(function()
    end)
 
     
-Main:AddToggle("Auto Click",false,function(value)
+Main:AddToggle("คลิก อัตโนมัติ",false,function(value)
 _G.AutoClick = value
 end)
 
-Main:AddToggle("Disabled Notifications Text",false,function(NamfonGay)
+Main:AddToggle("ปิดข้อความแจ้งเตือน",false,function(NamfonGay)
 _G.Remove_trct = NamfonGay
 end)
 
@@ -5544,7 +5544,7 @@ end)
 
 
 
-Main:AddToggle("Remove Hit Sound And Level Up",false,function(Remo)
+Main:AddToggle("ลบเสียง",false,function(Remo)
 _G.RemoveHit = Remo
 end)
 
@@ -5560,7 +5560,7 @@ spawn(function()
     end)
 end)
 
-Main:AddToggle("Disabled Damage",false,function(Remo)
+Main:AddToggle("ปิดกาเมจ",false,function(Remo)
 _G.KobenHeegeen = Remo
 end)
 
@@ -5575,7 +5575,7 @@ spawn(function()
 end)
 
 
-Main:AddToggle("Black Screen",false,function(Umm)
+Main:AddToggle("จอดำ",false,function(Umm)
 _G.StartBlackScreen = Umm
 end)
 
@@ -5602,7 +5602,7 @@ end)
     end
 end) 
     
-        Main:AddToggle("White Screen",_G.WhiteScreen,function(value)
+        Main:AddToggle("จอขาว",_G.WhiteScreen,function(value)
     _G.WhiteScreen = value
 if _G.WhiteScreen == true then
     game:GetService("RunService"):Set3dRenderingEnabled(false)
@@ -5611,7 +5611,7 @@ elseif _G.WhiteScreen == false then
 end
 end)
 
-    Main:AddToggle("Invisible Monsters",_G.inv,function(value)
+    Main:AddToggle("มอน ล่องหน",_G.inv,function(value)
     _G.inv = value
     
          while wait() do
@@ -5642,20 +5642,20 @@ end)
       end
     end)
     
-    Main:AddSeperator("Setting Farm Mode")
+    Main:AddSeperator("ตั้งค่าโหมดฟาร์ม")
 
-    Main:AddLabel("Distance X Right Vector")
-    Main:AddLabel("Distance Y Up Vector")
-    Main:AddLabel("Distance Z Behind Vector")
+    Main:AddLabel("ระยะทาง X ขวา")
+    Main:AddLabel("ระยะทาง Y บน")
+    Main:AddLabel("ระยะทาง Z หลัง")
 
 
     PosY = 35
-    Main:AddSlider("Pos Y Distance Farm ",0,50,35,function(value)
+    Main:AddSlider("ระยะทาง Y",0,50,35,function(value)
     PosY = value
     end)
     
 
-    Main:AddSeperator("Misc Setting Mastery")
+    Main:AddSeperator("ตั้งค่าฟาร์ม มาสเตอร์รี่")
     
     _G.Kill_At = 25
 
@@ -5682,10 +5682,10 @@ end)
         _G.SkillV = value
     end)
     
-    M:AddSeperator("World")
+    M:AddSeperator("โลก")
 
     if World1 then
-        M:AddToggle("Auto Second Sea",_G.AutoSecondSea,function(value)
+        M:AddToggle("ออโต้ โลก2",_G.AutoSecondSea,function(value)
             _G.AutoSecondSea = value
             StopTween(_G.AutoSecondSea)
         end)
@@ -5748,7 +5748,7 @@ end)
 
     if World2 then
 
-        M:AddToggle("Auto Third Sea",_G.AutoThirdSea,function(value)
+        M:AddToggle("ออโต้ โลก3",_G.AutoThirdSea,function(value)
             _G.AutoThirdSea = value
             StopTween(_G.AutoThirdSea)
         end)
@@ -5798,7 +5798,7 @@ end)
     
     if World2 then
 
-        M:AddToggle("Auto Farm Factory",_G.AutoFactory,function(value)
+        M:AddToggle("ออโต้ ตีโรงงาน",_G.AutoFactory,function(value)
             _G.AutoFactory = value
             StopTween(_G.AutoFactory)
         end)
@@ -5837,8 +5837,8 @@ end)
             end
         end)
 end)
-Mirragecheck = M:AddLabel("")
-M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
+Mirragecheck = M:AddLabel("เกาะลับ🏝")
+M:AddToggle("ออโต้ เกาะลับ",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5854,7 +5854,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Auto Drive",AutoW,function(W)
+    M:AddToggle("ออโต้ ขับเรือ",AutoW,function(W)
     AutoW = W
     end)
     spawn(function()
@@ -5873,7 +5873,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
 		end)
     end
     end)
-    M:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
+    M:AddToggle("ออโต้ เรียกเกะลับ",_G.dao,function(state)
     if state then
         _G.dao = true
     else
@@ -5934,7 +5934,7 @@ for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
 end
 end
 end) 
-M:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
+M:AddToggle("ไปหาคนขายผลเกะลับ",_G.TPNPC,function(value)
              _G.Miragenpc = value
              StopTween(_G.Miragenpc)
         end)
@@ -5950,7 +5950,7 @@ spawn(function()
         end
     end)
 end)
-M:AddButton("Teleport Advanced Fruit Dealer", function()
+M:AddButton("ไปหาคนขายผลเกะลับ", function()
                 TweenNpc()
                 end)
 
@@ -5970,7 +5970,7 @@ M:AddButton("Teleport Advanced Fruit Dealer", function()
                             end
                         end
                     end
-M:AddToggle("Tween Gear",_G.TweenMGear,function(value)
+M:AddToggle("บินไปหา เกียร์",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -5996,7 +5996,7 @@ end
     
     M:AddLine()
 
-    M:AddSeperator("Fighting Style")
+    M:AddSeperator("หมัด")
     
     M:AddToggle("Auto Superhuman",_G.AutoSuperhuman,function(value)
         _G.AutoSuperhuman = value
@@ -6391,7 +6391,7 @@ local MaterialsPos1 = CFrame.new(-507.7895202636719, 72.99479675292969, -126.456
 end
   
 if World2 then  
-M:AddToggle("Auto Farm Mystic Droplet",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Mystic Droplet",false,function(value)
 _G.Makori_gay = value
 StopTween(_G.Makori_gay)
 end)
@@ -6448,7 +6448,7 @@ spawn(function()
 end
     
 if World1 or World2 then
-M:AddToggle("Auto Farm Magma Ore",_G.Makori_gay,function(value)
+M:AddToggle("ออโต้ฟาร์ม Magma Ore",_G.Makori_gay,function(value)
 _G.Umm = value
 StopTween(_G.Umm)
 end)
@@ -6555,7 +6555,7 @@ spawn(function()
 end
     
 if World1 then  
-M:AddToggle("Auto Farm Angel Wings",_G.Makori_gay,function(value)
+M:AddToggle("ออโต้ฟาร์ม Angel Wings",_G.Makori_gay,function(value)
 _G.Auto_Wing = value
 StopTween(_G.Auto_Wing)
 end)
@@ -6612,7 +6612,7 @@ spawn(function()
 end
 
 if World1 or World2 or World3 then   
-M:AddToggle("Auto Farm Leather",_G.Makori_gay,function(value)
+M:AddToggle("ออโต้ฟาร์ม Leather",_G.Makori_gay,function(value)
 _G.Leather = value
 StopTween(_G.Leather)
 end)
@@ -6769,7 +6769,7 @@ spawn(function()
  end
   
 if World1 or world2 or World3 then    
-M:AddToggle("Auto Farm Scrap Metal",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Scrap Metal",false,function(value)
 Scrap = value
 StopTween(Scrap)
 end)
@@ -6926,7 +6926,7 @@ spawn(function()
 end
     
 if World3 then  
-M:AddToggle("Auto Farm Conjured Cocoa",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Conjured Cocoa",false,function(value)
 Cocoafarm = value
 StopTween(Cocoafarm)
 end)
@@ -6983,7 +6983,7 @@ spawn(function()
 end
  
 if World3 then     
-M:AddToggle("Auto Farm Dragon Scale",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Dragon Scale",false,function(value)
 Dragon_Scale = value
 StopTween(Dragon_Scale)
 end)
@@ -7040,7 +7040,7 @@ spawn(function()
 end
   
 if World3 then    
-M:AddToggle("Auto Farm Gunpowder",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Gunpowder",false,function(value)
 Gunpowder = value
 StopTween(Gunpowder)
 end)
@@ -7097,7 +7097,7 @@ spawn(function()
 end
  
 if World3 then     
-M:AddToggle("Auto Farm Fish Tail World 3",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Fish Tail โลก3",false,function(value)
 Fish = value
 StopTween(Fish)
 end)
@@ -7154,7 +7154,7 @@ spawn(function()
 end
     
 if World3 then  
-M:AddToggle("Auto Farm Mini Tusk",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Mini Tusk",false,function(value)
 MiniHee = value
 StopTween(MiniHee)
 end)
@@ -7211,7 +7211,7 @@ spawn(function()
 end
 
 if World3 then  
-M:AddToggle("Auto Farm Wooden Plank",false,function(value)
+M:AddToggle("ออโต้ฟาร์ม Wooden Plank",false,function(value)
 _G.AutoWooddenPlank = value
 StopTween(MiniHee)
 end)
@@ -7266,13 +7266,13 @@ spawn(function()
 end)
 end
     
-    M:AddToggle("Hop Farm",_G.Makori_gay,function(value)
+    M:AddToggle("ย้ายเซิฟ ฟาร์ม",_G.Makori_gay,function(value)
     _G.StardHop = value
     end)
 
     M:AddSeperator("Advance Dungeon")
     
-    M:AddToggle("Auto Phoenix Raid",_G.AutoAdvanceDungeon,function(value)
+    M:AddToggle("ออโต้ ลงดันฟีนิกซ์",_G.AutoAdvanceDungeon,function(value)
         _G.AutoAdvanceDungeon = value
         StopTween(_G.AutoAdvanceDungeon)
     end)
@@ -16200,3 +16200,11 @@ game.StarterGui:SetCore("SendNotification", {
       Title = "Loper Hub", 
       Text = "Welcome To Script!!";
 })
+wait(3)
+game.StarterGui:SetCore("SendNotification", {
+      Icon = "rbxassetid://16387180116";
+      Title = "Loper Hub", 
+      Text = "Enjoy kub pom";
+})
+
+   
