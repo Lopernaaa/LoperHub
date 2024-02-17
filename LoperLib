@@ -151,7 +151,7 @@ function Update:Window(text,logo,keybind)
     Hub.Position = UDim2.new(0, 85, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = "        HUB"
+    Hub.Text = "      HUB"
     Hub.TextColor3 = Color3.fromRGB(0, 150, 255)   
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -164,7 +164,7 @@ function Update:Window(text,logo,keybind)
     MapName.Position = UDim2.new(0, 85, 0, 0)
     MapName.Size = UDim2.new(0, 81, 0, 27)
     MapName.Font = Enum.Font.GothamSemibold
-    MapName.Text = "                | BLOX FRUIT"
+    MapName.Text = "              | BLOX FRUIT"
     MapName.TextColor3 = Color3.fromRGB(225, 225, 225)   
     MapName.TextSize = 20.000
     MapName.TextXAlignment = Enum.TextXAlignment.Left
@@ -516,7 +516,7 @@ local LogoToggle = Instance.new("ImageLabel")
     LogoToggle.BackgroundTransparency = 1.000
     LogoToggle.Position = UDim2.new(0, 7, 0, 2)
     LogoToggle.Size = UDim2.new(0, 26, 0, 26)
-    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(16387180116)
+    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring()
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
@@ -16017,7 +16017,7 @@ Misc:AddToggle("Esp Mystic Island", false, function(value)
         originalstam = LocalPlayer.Character.Energy.Value
     end)
     
-    Misc:AddToggle("ออโต้ เผ่ามิ้ง",_G.AutoAgility,function(value)
+    Misc:AddToggle("Auto Agility",_G.AutoAgility,function(value)
         _G.AutoAgility = value
     end)
     
@@ -16200,11 +16200,3 @@ game.StarterGui:SetCore("SendNotification", {
       Title = "Loper Hub", 
       Text = "Welcome To Script!!";
 })
-wait(3)
-game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://16387180116";
-      Title = "Loper Hub", 
-      Text = "";
-})
-
-   
